@@ -11,7 +11,7 @@ const blogRoutes = require("./routes/blogs")
 app.use("/api/v1" , blogRoutes);
 
 
-app.listen( PORT , () => console.log(`Server stared at PORT : ${PORT}`))
+// app.listen( PORT , () => console.log(`Server stared at PORT : ${PORT}`))
 
 const {dbConnect} = require("./config/database")
 dbConnect();
@@ -19,3 +19,6 @@ dbConnect();
 app.get("/" , (req , res) => {
     res.send(`<h1>This is Home Page</h1>`)
 })
+
+// Export the app for Vercel
+module.exports = app;
