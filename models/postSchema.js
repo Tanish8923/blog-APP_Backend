@@ -4,12 +4,12 @@ const postSchema = new mongoose.Schema({
     title : {
         type : String , 
         required : true ,
-        maxLength : 50
+        maxLength : 500
     },
     body : {
         type : String , 
         required : true ,
-        maxLength : 50
+        maxLength : 500
     } , 
     likes : [{
         type : mongoose.Schema.ObjectId,

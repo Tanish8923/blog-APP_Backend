@@ -17,7 +17,7 @@ exports.createComment = async(req , res) => {
         //here we mention {new : true} because we want updated post if we not mention this then it return old post.
         .populate("comments")
         //populate the comments array with comment documents
-        //currently we have comment id but we weat actual document so using populate we can retrieve document which relate to that id.
+        //currently we have comment id but we went actual document so using populate we can retrieve document which relate to that id.
         .exec();
 
         res.status(200).json({
